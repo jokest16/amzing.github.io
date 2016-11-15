@@ -1,0 +1,121 @@
+//верстка header
+@import "bourbon"
+@import "vars"
+body
+  box-sizing: border-box
+  overflow-x: hidden
+a
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none
+p
+  font-family: 'FiraSansExtraLight',sans-serif
+h3
+  font-size: em(24px)
+  font-family: 'FiraSansBold',sans-serif
+  font-weight: lighter
+  text-transform: uppercase
+img
+  width: 100%
+.toggle-mnu
+  position: absolute
+  bottom: 35px
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  span:after, span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 4px
+    background-color: #000
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.on span
+    background-color: transparent
+  &.on span:before
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.on span:after
+    transform: rotate(-45deg) translate(6px, -7px)
+header
+  background: url(../img/header/head-bg.jpg) 0 0 no-repeat
+  background-size: cover
+  padding-top: 85px
+  padding-bottom: 270px
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    border: 1015px solid transparent
+    border-right: 1500px solid $blue
+    opacity: .3
+  .top-pannel
+    display: flex
+    align-items: baseline
+    justify-content: space-between
+    margin-bottom: 210px
+    &-logo
+      color: #000
+      font-size: 70px
+      font-family: 'FiraSansExtraBold',sans-serif
+    &-togle
+      cursor: pointer
+      font-size: 40px
+      position: relative
+      z-index: 3
+      &-menu
+        list-style: none
+        display: flex
+        animation-duration: 1.5s
+        &-item
+          position: relative
+          font-size: em(30px)
+          font-family: 'FiraSansExtraLight',sans-serif
+          margin-right: 20px
+          padding: 10px 20px
+          cursor: pointer
+          opacity: .99
+          &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            z-index: -1
+            background: #fff
+            opacity: 0
+            transition: all .5s ease
+            border-radius: 20px
+          &:hover
+            &::before
+              opacity: .5
+      span
+        font-size: em(4px)
+        position: absolute
+        bottom: 0
+        left: 2px
+        text-transform: uppercase
+  h2
+    font-size: em(72px)
+    font-family: 'FiraSansExtraLight',sans-serif
+    color: #000
+    margin-bottom: -10px
+  p
+    font-family: 'FiraSansExtraLight',sans-serif
+    font-size: em(30px)
+    b
+      font-family: 'FiraSansExtraBold',sans-serif
